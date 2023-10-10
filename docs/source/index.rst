@@ -23,7 +23,8 @@ Contents
    :maxdepth: 2
    :caption: Contents:
 
-   usage
+   examples/usage.rst
+   examples/structure.rst
 
 Indices and tables
 ==================
