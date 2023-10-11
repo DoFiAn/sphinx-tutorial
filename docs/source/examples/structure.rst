@@ -243,7 +243,116 @@ True   True   True
 
 
 Lists
------------
+=====
+
+`Lists`_ can be used for (ordered) elements or to define terms. 
+
+Numbered lists
+--------------
+
+.. code-block:: rst
+
+
+   Things I hate:
+
+   1. Jokes
+   2. Lists
+   3. Irony
+   4. Lists
+   5. Repetition
+
+**Rendered**
+
+Things I hate:
+
+1. Jokes
+2. Lists
+3. Irony
+4. Lists
+5. Repetition
+
+
+Autonumbered lists
+------------------
+
+**Example**
+
+.. code-block:: rst
+
+   Things I hate:
+
+   #. Jokes
+   #. Lists
+   #. Irony
+   #. Lists
+   #. Repetition
+
+**Rendered**
+
+Things I hate:
+
+#. Jokes
+#. Lists
+#. Irony
+#. Lists
+#. Repetition
+
+
+
+Bullet lists
+------------
+
+**Example**
+
+.. code-block:: rst
+
+   Things I hate:
+
+   * Jokes
+   * Lists
+   * Irony
+   * Lists
+   * Repetition
+
+**Rendered**
+
+Things I hate:
+
+* Jokes
+* Lists
+* Irony
+* Lists
+* Repetition
+
+Term lists
+----------
+
+**Example**
+
+.. code-block:: rst
+
+   Things I hate:
+
+   Jokes
+      Something funny.
+   Lists
+      Ordered elements.
+   Irony
+      Meaning the opposite.
+
+
+**Rendered**
+
+Things I hate:
+
+
+Jokes
+   Something funny.
+Lists
+   Ordered elements.
+Irony
+   Meaning the opposite.
+
 
 Admonition
 -----------
@@ -279,4 +388,5 @@ References
 .. _`Tables` : https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#tables
 .. _`Grid tables` : https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#grid-tables
 .. _`Simple tables` : https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#simple-tables
+.. _`Lists` : https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#lists-and-quote-like-blocks
 
