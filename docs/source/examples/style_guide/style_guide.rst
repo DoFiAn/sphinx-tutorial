@@ -42,6 +42,85 @@ VS Code can be configured to replace tabs with spaces:
 * Select "Convert Indentation to Spaces" from the menu that appears.
 * Select 3 spaces from the menu.
 
+Inline Markup
+=============
+Use `Inline markup`_ for formating text. 
+
+Emphasis
+--------
+One asterisk for emphasis(italics).
+
+**Example**
+
+.. code-block:: rst
+
+   This is *emphasized* text.
+
+**Rendered**
+
+This is *emphasized* text.
+
+Strong
+------
+
+Two asterisks for strong emphasis (boldface).
+
+**Example**
+
+.. code-block:: rst
+
+   This is **strong** text.
+
+**Rendered**
+
+This is **strong** text.
+
+Code samples
+------------
+
+Backquotes for code samples.
+
+**Example**
+
+.. code-block:: rst
+
+   This is ``code`` text.
+
+**Rendered**
+
+This is ``code`` text.
+
+********
+Sections
+********
+
+`Sections`_  structure a document and are created by overlines/underlines with special charaters. 
+There is no fixed number and order of section title adornment styles, the order enforced will be the order as encountered. 
+
+**Example**
+
+.. code-block:: rst
+
+   ####################
+   H1 Headline level 1.
+   ####################
+
+   ********************
+   H2 Headline level 2.
+   ********************
+
+   H3 Headline level 3.
+   ====================
+
+   H4 Headline level 4.
+   --------------------
+
+   H5 Headline level 5.
+   ^^^^^^^^^^^^^^^^^^^^
+
+   H6 Headline level 6.
+   """"""""""""""""""""
+
 
 ********
 Comments
@@ -68,11 +147,13 @@ Code examples
 *************
 
 There are multiple possibility to show code examples "as they are":
+
 * Literal blocks
 * code-block directive
 
 Literal blocks
 ==============
+
 `Literal blocks`_ can be used as inline code. They are not rendered. They start with `::` and are indented.
 
 
@@ -106,6 +187,7 @@ Continuing with normal paragraph.
 
 Code block directive
 ====================
+
 `Code-block`_ directive can be used as inline code. They are not rendered. They start with `.. code::` directive followed by the language. 
 
 **Example**
@@ -132,36 +214,7 @@ Code block directive
 
 
 
-********
-Sections
-********
 
-`Sections`_  structure a document and are created by overlines/underlines with special charaters. 
-There is no fixed number and order of section title adornment styles, the order enforced will be the order as encountered. 
-
-**Example**
-
-.. code-block:: rst
-
-   ####################
-   H1 Headline level 1.
-   ####################
-
-   ********************
-   H2 Headline level 2.
-   ********************
-
-   H3 Headline level 3.
-   ====================
-
-   H4 Headline level 4.
-   --------------------
-
-   H5 Headline level 5.
-   ^^^^^^^^^^^^^^^^^^^^
-
-   H6 Headline level 6.
-   """"""""""""""""""""
 
 ******
 Tables
@@ -354,14 +407,46 @@ Irony
    Meaning the opposite.
 
 
+**********
+Images
+**********
+
+`Images`_ can be included with the image directive. 
+
+**Example**
+
+.. code-block:: rst
+
+   .. image:: ./images/draw_io_extension.png
+      :alt: DrawIo extension for Visual Studio Code
+      :align: center
+
+
+
+**Rendered**
+
+.. image:: ./images/draw_io_extension.png
+   :alt: DrawIo extension for Visual Studio Code
+   :align: center
+
+
+Drawio.png
+==========
+
+
+
+**********
 Admonition
------------
+**********
 
-Immages
------------
+**********
+UML
+**********
 
-Footnotes
----------
+
+
+
+
 
 ******
 Links
@@ -389,4 +474,6 @@ References
 .. _`Grid tables` : https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#grid-tables
 .. _`Simple tables` : https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#simple-tables
 .. _`Lists` : https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#lists-and-quote-like-blocks
+.. _`Inline markup` : https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#inline-markup
+.. _`Images` : https://docutils.sourceforge.io/docs/ref/rst/directives.html#image
 
