@@ -495,8 +495,47 @@ Generated drawio.png file:
 PlantUML
 ========
 
-PlantUML can be used to create E/R diagrams. 
+PlantUML can be used to create E/R diagrams. In contrast to drawio.png files, those diagrams are text based and can be compared easily.
 
+.. note:: 
+   To render PlanUML diagrams java and PlantUML.jar is required at the host machine and conf.py has to be adapted. 
+
+.. todo::
+   Add description how to install PlantUML
+
+.. todo:: 
+   Add description how to setup a local environment at all
+
+
+   
+**Example**    
+
+.. code-block:: rst
+
+   .. uml::
+
+      @startuml
+
+      entity "Customers" as customers {
+         + Id : int <<PK>>
+         --
+         LastName : string
+         FirstName : string
+         Age : int
+      }
+
+      entity "Cust_Orders" as orders {
+         + OrderId : int <<PK>>
+         --
+         OrderNumber : int
+         CustomerId : int <<FK>>
+      }
+
+      customers --o{ orders : "has"
+
+      @enduml
+
+**Rendered**
 
 .. uml::
 
@@ -525,15 +564,14 @@ PlantUML can be used to create E/R diagrams.
 
 
 
-
-**********
+************
 Admonition
-**********
+************
 
 Admonition blocks are used to highlight a text.
 
 Notes
------
+=====
 
 **Example**
 
@@ -548,7 +586,7 @@ Notes
    This is a note admonition.
 
 Warnings
---------
+========
 
 **Example**
 
@@ -564,7 +602,7 @@ Warnings
 
 
 Errors
-------
+======
 
 **Example**
 
@@ -577,12 +615,6 @@ Errors
 
 .. error::
    This is an error admonition.
-
-
-**********
-UML
-**********
-
 
 
 
@@ -697,3 +729,11 @@ References
 .. _`DrawIo-Sql-Plugin` : https://www.drawio.com/doc/faq/sql-plugin
 .. _`External links` : https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#hyperlinks
 
+
+*******************
+To-Do List
+*******************
+
+Issues to be fixed in this documentation:
+
+.. todolist::

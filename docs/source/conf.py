@@ -21,6 +21,7 @@ release = '0.1'
 # ones.
 extensions = [
     'sphinx.ext.duration',
+    'sphinx.ext.todo',
     'sphinx_rtd_theme', 
     'sphinxcontrib.plantuml'
 ]
@@ -33,10 +34,13 @@ exclude_patterns = []
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
+# set html_theme
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
 
 # -- Options for PlantUML ----------------------------------------------------
+# https://pypi.org/project/sphinxcontrib-plantuml/
+
 # set plantuml.jar path
 cwd = os.getcwd()
 if os.path.exists(os.path.join(cwd, "_tools/plantuml.jar")):
@@ -48,3 +52,7 @@ else:
 
 # set plantuml output format
 plantuml_output_format ='svg_obj'
+
+# -- Options for todo extension -------------------------------------------------
+# https://www.sphinx-doc.org/en/master/usage/extensions/todo.html#configuration
+todo_include_todos = True
