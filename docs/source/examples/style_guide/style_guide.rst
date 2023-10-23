@@ -492,6 +492,35 @@ Generated drawio.png file:
    :alt: DrawIo SQL Plugin example
    :align: center
 
+PlantUML
+========
+
+PlantUML can be used to create E/R diagrams. 
+
+
+.. uml::
+
+   @startuml
+
+   entity "Customers" as customers {
+      + Id : int <<PK>>
+      --
+      LastName : string
+      FirstName : string
+      Age : int
+   }
+
+   entity "Cust_Orders" as orders {
+      + OrderId : int <<PK>>
+      --
+      OrderNumber : int
+      CustomerId : int <<FK>>
+   }
+
+   customers --o{ orders : "has"
+
+   @enduml
+
 
 
 
@@ -553,9 +582,6 @@ Errors
 **********
 UML
 **********
-
-
-
 
 
 
