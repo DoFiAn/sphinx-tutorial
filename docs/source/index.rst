@@ -27,7 +27,7 @@ Facts database <https://world.openfoodfacts.org/>`_ and offers a *simple* and
    :maxdepth: 2
    :caption: Contents:
 
-   examples/usage.rst
+   examples/setup.rst
    examples/style_guide/style_guide.rst
 
 Indices and tables
