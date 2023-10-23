@@ -6,9 +6,11 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'Lumache'
-copyright = '2023, Graziella'
-author = 'Graziella'
+import os
+
+project = 'Sphinx tryout'
+copyright = 'comp name'
+author = 'DoFiAn'
 release = '0.1'
 
 # -- General configuration ---------------------------------------------------
@@ -19,7 +21,8 @@ release = '0.1'
 # ones.
 extensions = [
     'sphinx.ext.duration',
-    'sphinx_rtd_theme'
+    'sphinx_rtd_theme', 
+    'sphinxcontrib.plantuml'
 ]
 
 templates_path = ['_templates']
@@ -32,3 +35,16 @@ exclude_patterns = []
 
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
+
+# -- Options for PlantUML ----------------------------------------------------
+# set plantuml.jar path
+cwd = os.getcwd()
+if os.path.exists(os.path.join(cwd, "_tools/plantuml.jar")):
+    plantuml = 'java -Djava.awt.headless=true -jar %s' % os.path.join(cwd, "_tools/plantuml.jar")
+elif os.path.exists('/usr/share/plantuml/plantuml.jar'):
+    plantuml = 'java -Djava.awt.headless=true -jar /usr/share/plantuml/plantuml.jar'
+else:
+    raise RuntimeError("Could not find plantuml.jar, please ensure that it is installed either in _tools/plantuml.jar or /usr/share/plantuml/plantuml.jar")
+
+# set plantuml output format
+plantuml_output_format ='svg_obj'
