@@ -4,6 +4,14 @@ Style Guide
 
 This section gives an overview of reStructured Text elements. 
 
+.. _contents:
+
+********
+Contents
+********
+
+
+.. contents:: Table of contents
 
 ***********
 Text blocks
@@ -493,6 +501,55 @@ Generated drawio.png file:
 Admonition
 **********
 
+Admonition blocks are used to highlight a text.
+
+Notes
+-----
+
+**Example**
+
+.. code-block:: rst
+
+   .. note::
+      This is a note admonition.
+
+**Rendered**
+
+.. note::
+   This is a note admonition.
+
+Warnings
+--------
+
+**Example**
+
+.. code-block:: rst
+
+   .. warning::
+      This is a warning admonition. 
+
+**Rendered**
+
+.. warning::
+   This is a warning admonition.
+
+
+Errors
+------
+
+**Example**
+
+.. code-block:: rst
+
+   .. error::
+      This is an error admonition.
+
+**Rendered**
+
+.. error::
+   This is an error admonition.
+
+
 **********
 UML
 **********
@@ -502,6 +559,9 @@ UML
 
 
 
+
+.. _links:
+
 ******
 Links
 ******
@@ -509,11 +569,88 @@ Links
 Links to external sites
 =======================
 
+`External Links`_ can be created by using the `link text <url>`_ syntax.
+
+**Example**
+
+.. code-block:: rst
+
+   `Link to google <http:\\www.google.com>`_
+
+
+
+**Rendered**
+
+   `Link to google <http:\\www.google.com>`_
+
+
+
+Target Notes
+===============
+
+You can also separate the link and the target definition (ref), like this:
+
+**Example**
+
+.. code-block:: rst
+
+   This is a paragraph that contains `a link to google`_.
+
+   .. _a link to google: http:\\www.google.com
+
+**Rendered**
+
+This is a paragraph that contains `a link to google`_.
+
+.. _a link to google: http:\\www.google.com
+
+
+Especially with the `.. target-notes::` directive, this can be useful to avoid cluttering the text with links and all links can be collected at the end of the document.
+
+Cross-references
+================
+
+
+
+You can define a reference label by using the `.. my-lable-name:` and refere to it y using the `:ref:my-lable-name` directive. 
+If such a lable is placed before a section/table or image, the section/table or image can be referenced. 
+
+
+**Example** 
+
+.. code-block:: rst
+
+   .. defining a link referencs before a section
+   
+   .. _links:
+   ******
+   Links
+   ******
+
+   .. using the link reference to the section
+   This is a paragraph that contains a reference to the :ref:`Links` section.
+
+
+**Rendered**
+
+This is a paragraph that contains a reference to the :ref:`Links` section.
+
+
+
 Table of contents
 =================
 
-References
-==========
+The `.. contents::` directive can be used to create a table of contents.
+
+**Example**
+
+.. code-block:: rst
+
+   .. contents:: Table of contents
+
+**Rendered**
+
+Refer to section :ref:`contents` for the table of contents.
 
 **********
 References
@@ -532,4 +669,5 @@ References
 .. _`Images` : https://docutils.sourceforge.io/docs/ref/rst/directives.html#image
 .. _`DrawIo extension for Visual Studio Code` : https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio
 .. _`DrawIo-Sql-Plugin` : https://www.drawio.com/doc/faq/sql-plugin
+.. _`External links` : https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#hyperlinks
 
