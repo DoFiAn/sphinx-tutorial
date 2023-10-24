@@ -7,20 +7,13 @@
 Sphinx-tutorial (tryout)
 #########################
 
-This is a tryout of the sphinx tutorial. It is forked from `Read the Docs tutorial-template`_. How to setup a read-the docs project is described in the `Read the Docs tutorial`_.
-
+This is a tryout of the sphinx tutorial. It is forked from `Read the Docs tutorial-template`_. 
+How to setup a read-the docs project is described in the `Read the Docs tutorial`_.
 How to write Sphinx documentation is available in the `Sphinx tutorial`_.
-
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers that
-creates recipes mixing random ingredients.  It pulls data from the `Open Food
-Facts database <https://world.openfoodfacts.org/>`_ and offers a *simple* and
-*intuitive* API.
 
 .. note::
 
    This project is under active development.
-
-
 
 
 .. toctree:: 
@@ -29,6 +22,7 @@ Facts database <https://world.openfoodfacts.org/>`_ and offers a *simple* and
 
    examples/setup.rst
    examples/style_guide/style_guide.rst
+   examples/needs.rst
 
 Indices and tables
 ==================

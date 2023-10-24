@@ -23,7 +23,8 @@ extensions = [
     'sphinx.ext.duration',
     'sphinx.ext.todo',
     'sphinx_rtd_theme', 
-    'sphinxcontrib.plantuml'
+    'sphinxcontrib.plantuml',
+    'sphinx_needs'
 ]
 
 templates_path = ['_templates']
@@ -56,3 +57,13 @@ plantuml_output_format ='svg_obj'
 # -- Options for todo extension -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/extensions/todo.html#configuration
 todo_include_todos = True
+
+# -- Options for needs extension ------------------------------------------------
+# https://sphinxcontrib-needs.readthedocs.io/en/latest/configuration.html
+
+needs_types = [dict(directive="req", title="Requirement", prefix="R_", color="#BFD8D2", style="node"),
+               dict(directive="spec", title="Specification", prefix="S_", color="#FEDCD2", style="node"),
+               ]
+
+needs_id_required = True
+
