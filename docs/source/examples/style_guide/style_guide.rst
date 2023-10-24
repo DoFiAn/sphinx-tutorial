@@ -500,13 +500,6 @@ PlantUML can be used to create E/R diagrams. In contrast to drawio.png files, th
 .. note:: 
    To render PlanUML diagrams java and PlantUML.jar is required at the host machine and conf.py has to be adapted. 
 
-.. todo::
-   Add description how to install PlantUML
-
-.. todo:: 
-   Add description how to setup a local environment at all
-
-
    
 **Example**    
 

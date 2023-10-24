@@ -51,3 +51,19 @@ References
 .. _`Read the Docs tutorial` : https://docs.readthedocs.io/en/latest/tutorial/index.html
 .. _`Sphinx tutorial` : https://www.sphinx-doc.org/en/master/tutorial/index.html
                      
+
+***********
+Open Points
+***********
+.. todo::
+   Add needs in documenation
+
+.. todo::
+   Describe how to generate documenation based on a docker image with WSL2 and VS-Code integration
+
+.. todo:: 
+   Describe how integrate needs in documentation
+
+.. todo:: 
+   setup a yaml file to process documenation in CI/CD pipeline.
+
