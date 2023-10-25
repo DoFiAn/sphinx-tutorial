@@ -65,5 +65,12 @@ needs_types = [dict(directive="req", title="Requirement", prefix="R_", color="#B
                dict(directive="spec", title="Specification", prefix="S_", color="#FEDCD2", style="node"),
                ]
 
+# ID-related options
 needs_id_required = True
+needs_id_regex = '^[A-Za-z0-9_]' # anything goes
 
+# List of additional needs attributes
+needs_extra_options = ['author', 'effort']
+
+# Generate needs.json
+needs_export = True
